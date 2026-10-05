@@ -2,7 +2,7 @@ import pactum from 'pactum';
 import { StatusCodes } from 'http-status-codes';
 import { SimpleReporter } from '../simple-reporter';
 
-describe('Deck of cards', () => {
+describe('Dec cards', () => {
   const p = pactum;
   const rep = SimpleReporter;
   const baseUrl = 'https://deckofcardsapi.com/api';
