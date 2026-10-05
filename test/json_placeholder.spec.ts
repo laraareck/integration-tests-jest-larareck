@@ -24,6 +24,33 @@ describe('Json Placeholder', () => {
         })
         .expectStatus(StatusCodes.CREATED);
     });
+
+    it('buscar um post existente', async () => {
+      await p
+        .spec()
+        .get(`${baseUrl}/posts/1`)
+        .expectStatus(StatusCodes.OK);
+    });
+
+    it('atualizar um post existente', async () => {
+      await p
+        .spec()
+        .put(`${baseUrl}/posts/1`)
+        .withJson({
+          id: 1,
+          userId: 1,
+          title: 'post atualizado',
+          body: 'atualizando teste de api'
+        })
+        .expectStatus(StatusCodes.OK);
+    });
+
+    it('excluir um post', async () => {
+      await p
+        .spec()
+        .delete(`${baseUrl}/posts/1`)
+        .expectStatus(StatusCodes.OK);
+    });
   });
 
   describe('ALBUMS', () => {
