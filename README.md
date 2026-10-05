@@ -1,4 +1,4 @@
-# API test automation with Jest and PactumJn  nmnbm
+# API test automation with Jest
 
 > Simple integration between JestJS and PactumJS.
 
